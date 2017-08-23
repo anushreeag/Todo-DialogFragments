@@ -16,6 +16,7 @@ public class TodoBean implements Serializable {
     private String notes;
     private String date;
     private String priority;
+    private int priority_index;
 
     public String getNotes() {
         return notes;
@@ -43,6 +44,28 @@ public class TodoBean implements Serializable {
         date = dt;
         notes = note;
         priority = mpriority;
+        priority_index = getPriorityIndex(priority);
+
+
+    }
+
+    public int getPriorityIndex(String priority){
+        int priority_index = 0;
+        if("HIGH".equals(priority)) priority_index = 1;
+
+        if("MED".equals(priority)) priority_index = 2;
+
+        if("LOW".equals(priority)) priority_index = 3;
+
+        return priority_index;
+    }
+
+    public int getPriority_index() {
+        return priority_index;
+    }
+
+    public void setPriority_index(int priority_index) {
+        this.priority_index = priority_index;
     }
 
     public String getPriority() {

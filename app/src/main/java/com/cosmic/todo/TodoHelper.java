@@ -18,8 +18,9 @@ public class TodoHelper extends SQLiteOpenHelper{
     public static final String DATE = "date";
     public static final String NOTES = "notes";
     public static final String PRIORITY = "priority";
+    public static final String PRIORITY_INDEX = "priority_index";
     public static final String CREATE_TABLE = "create table "+TODO_TABLE+"( "+ ID +" integer primary key autoincrement, "+TITLE+" text, " +
-            NOTES+" text, "+ DATE+" text, "+PRIORITY+" text)";
+            NOTES+" text, "+ DATE+" text, "+PRIORITY+" text, "+PRIORITY_INDEX+" integer)";
     private TodoHelper(Context context){
         super(context,DATABASE,null,VERSION);
     }

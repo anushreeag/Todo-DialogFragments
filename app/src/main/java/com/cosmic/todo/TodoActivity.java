@@ -16,6 +16,9 @@ import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
@@ -31,6 +34,8 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 import java.util.Locale;
+import java.util.zip.Inflater;
+
 
 public class TodoActivity extends AppCompatActivity {
 
@@ -40,6 +45,7 @@ public class TodoActivity extends AppCompatActivity {
     EditItemDialog editdia;
     AddItemDialog addItem;
     ListItemAdapter todoAdp;
+    HelpItemDialog helpdia;
     TodoDBFunctions dbfunctions;
     Context ctx;
     public static final String TAG = "TodoActivity";
@@ -68,7 +74,25 @@ public class TodoActivity extends AppCompatActivity {
         lv.setAdapter(todoAdp);
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater in = getMenuInflater();
+        in.inflate(R.menu.mymenu,menu);
+        return true;
+    }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if(item.getItemId()==R.id.action_help){
+            Toast.makeText(ctx,"You clicked menu",Toast.LENGTH_SHORT);
+            Log.i(TAG,"Menu Clicked");
+            helpdia = new HelpItemDialog();
+            helpdia.show(fm,"help_dialog");
+
+        }
+
+        return true;
+    }
 
     void populateList(){
         ReadTodoTask readTask = new ReadTodoTask();
@@ -268,12 +292,18 @@ public class TodoActivity extends AppCompatActivity {
 
                 if(tb.getPriority().equals("HIGH")){
                     holder.priority.setTextColor(getColor(android.R.color.holo_red_dark));
+                    holder.date.setBackgroundColor(getColor(R.color.colorLightBlue));
+                    holder.priority.setBackgroundColor(getColor(R.color.colorLightBlue));
                 }
                 if(tb.getPriority().equals("MED")){
-                    holder.priority.setTextColor(getColor(android.R.color.holo_orange_light));
+                    holder.priority.setTextColor(getColor(android.R.color.holo_orange_dark));
+                    holder.date.setBackgroundColor(getColor(R.color.colorLightPurple));
+                    holder.priority.setBackgroundColor(getColor(R.color.colorLightPurple));
                 }
                 if(tb.getPriority().equals("LOW")){
                     holder.priority.setTextColor(getColor(android.R.color.holo_green_dark));
+                    holder.date.setBackgroundColor(getColor(R.color.colorLightPink));
+                    holder.priority.setBackgroundColor(getColor(R.color.colorLightPink));
                 }
 
 

@@ -114,9 +114,9 @@ public class EditItemDialog extends DialogFragment {
                     tb.setNotes(etNotes.getText().toString());
                     tb.setDate(etDate.getText().toString());
                     tb.setPriority(spinner.getSelectedItem().toString());
+                    tb.setPriority_index(tb.getPriorityIndex(spinner.getSelectedItem().toString()));
                     updateTask.execute(tb);
-                    getDialog().dismiss();
-                    ta.recreate();
+
 
                 }
             }
@@ -207,8 +207,10 @@ public class EditItemDialog extends DialogFragment {
         protected void onPostExecute(Boolean result) {
 
             super.onPostExecute(result);
-            if(result)
-                Toast.makeText(ctx,"Updated Todo",Toast.LENGTH_SHORT);
+            if(result) {
+                getDialog().dismiss();
+                ta.recreate();
+            }
             else
                 Toast.makeText(ctx,"Failed to Update",Toast.LENGTH_SHORT);
         }

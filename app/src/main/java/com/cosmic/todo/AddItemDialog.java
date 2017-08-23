@@ -178,6 +178,7 @@ public class AddItemDialog extends DialogFragment {
             tb.setNotes(etNotes.getText().toString());
             tb.setDate(addDate);
             tb.setPriority(spinner.getSelectedItem().toString());
+            tb.setPriority_index(tb.getPriorityIndex(spinner.getSelectedItem().toString()));
             AddTodoTask addTask = new AddTodoTask();
             addTask.execute(tb);
 
