@@ -1,0 +1,139 @@
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.cosmic.todo.EditItemDialog">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textdesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="15dp"
+            android:text="@string/enter_item_textview"
+            android:textColor="@color/colorPurple"
+            android:textSize="20dp" />
+
+
+        <TextView
+            android:id="@+id/notesTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textdesc"
+            android:layout_alignStart="@+id/textdesc"
+            android:layout_below="@+id/textdesc"
+            android:layout_marginTop="37dp"
+            android:text="@string/title"
+            android:textColor="@color/colorPurple" />
+
+
+        <TextView
+            android:id="@+id/textTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/notesTitle"
+            android:layout_alignStart="@+id/notesTitle"
+            android:layout_below="@+id/notesTitle"
+            android:layout_marginTop="58dp"
+            android:text="@string/notes"
+            android:textColor="@color/colorPurple" />
+
+
+        <TextView
+            android:id="@+id/dateTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textTitle"
+            android:layout_alignStart="@+id/textTitle"
+            android:layout_centerVertical="true"
+            android:text="@string/dueDate"
+            android:textColor="@color/colorPurple" />
+
+        <TextView
+            android:id="@+id/priority"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/dateTitle"
+            android:layout_alignStart="@+id/dateTitle"
+            android:layout_below="@+id/editDate"
+            android:layout_marginTop="38dp"
+            android:text="@string/priority"
+            android:textColor="@color/colorPurple" />
+
+        <Button
+            android:id="@+id/save"
+            android:layout_width="wrap_content"
+            android:textColor="@color/colorPurple"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="14dp"
+            android:text="@string/save" />
+
+        <EditText
+            android:id="@+id/editTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/notesTitle"
+            android:layout_alignBottom="@+id/notesTitle"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:textColor="@color/colorBlue"
+            android:ems="10"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/editNotes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/editTitle"
+            android:layout_alignStart="@+id/editTitle"
+            android:layout_below="@+id/editTitle"
+            android:textColor="@color/colorBlue"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="25dp"
+            android:ems="10"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/editDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/editNotes"
+            android:layout_alignStart="@+id/editNotes"
+            android:textColor="@color/colorBlue"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:clickable="true"
+            android:ems="10" />
+
+        <Spinner
+            android:id="@+id/editPriority"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorBlue"
+            android:layout_alignBottom="@+id/priority"
+            android:layout_alignEnd="@+id/editDate"
+            android:layout_alignLeft="@+id/editDate"
+            android:layout_alignRight="@+id/editDate"
+            android:layout_alignStart="@+id/editDate"
+            android:clickable="true"
+            android:prompt="@string/spinnerTitle" />
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,151 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.cosmic.todo.EditItemDialog">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/addtextdesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="15dp"
+            android:textSize="20dp"
+            android:text="@string/enter_add_todo"
+            android:textColor="@color/colorPurple"/>
+
+        <TextView
+            android:id="@+id/addNotes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/addtextdesc"
+            android:layout_alignStart="@+id/addtextdesc"
+            android:layout_below="@+id/addtextdesc"
+            android:layout_marginTop="37dp"
+            android:text="@string/title"
+            android:textColor="@color/colorPurple" />
+
+
+        <TextView
+            android:id="@+id/addTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/addNotes"
+            android:layout_alignStart="@+id/addNotes"
+            android:layout_below="@+id/addNotes"
+            android:layout_marginTop="58dp"
+            android:text="@string/notes"
+            android:textColor="@color/colorPurple" />
+
+
+        <TextView
+            android:id="@+id/addDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/addTitle"
+            android:layout_alignStart="@+id/addTitle"
+            android:layout_centerVertical="true"
+            android:text="@string/dueDate"
+            android:textColor="@color/colorPurple" />
+
+        <TextView
+            android:id="@+id/addPriority"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/addDate"
+            android:layout_alignStart="@+id/addDate"
+            android:layout_below="@+id/editNewDate"
+            android:layout_marginTop="38dp"
+            android:color="#000000"
+            android:text="@string/priority"
+            android:textColor="@color/colorPurple" />
+
+        <Button
+            android:id="@+id/addSave"
+            android:layout_width="wrap_content"
+            android:textColor="@color/colorPurple"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="14dp"
+            android:text="@string/save"
+            android:layout_marginRight="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignRight="@+id/editNewPriority"
+            android:layout_alignEnd="@+id/editNewPriority" />
+
+        <Button
+            android:id="@+id/addCancel"
+            android:layout_width="wrap_content"
+            android:textColor="@color/colorPurple"
+            android:layout_height="wrap_content"
+            android:text="@string/cancel"
+            android:layout_alignBaseline="@+id/addSave"
+            android:layout_alignBottom="@+id/addSave"
+            android:layout_alignLeft="@id/addPriority" />
+
+        <EditText
+            android:id="@+id/editNewTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/addNotes"
+            android:layout_alignBottom="@+id/addNotes"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:textColor="@color/colorBlue"
+            android:ems="10"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/editNewNotes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/editNewTitle"
+            android:layout_alignStart="@id/editNewTitle"
+            android:layout_below="@id/editNewTitle"
+            android:textColor="@color/colorBlue"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="25dp"
+            android:ems="10"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/editNewDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/editNewNotes"
+            android:layout_alignStart="@id/editNewNotes"
+            android:textColor="@color/colorBlue"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:clickable="true"
+            android:ems="10" />
+
+        <Spinner
+            android:id="@+id/editNewPriority"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorBlue"
+            android:layout_alignBottom="@+id/addPriority"
+            android:layout_alignEnd="@+id/editNewDate"
+            android:layout_alignLeft="@+id/editNewDate"
+            android:layout_alignRight="@+id/editNewDate"
+            android:layout_alignStart="@+id/editNewDate"
+            android:clickable="true"
+            android:prompt="@string/spinnerTitle" />
+
+    </RelativeLayout>
+
+</LinearLayout>

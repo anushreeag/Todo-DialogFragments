@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:textColor="@color/colorPurple"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:layout_alignBottom="@+id/delete"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/delete"
+        android:layout_toStartOf="@+id/delete" />
+
+    <ImageButton
+        android:id="@+id/delete"
+        android:src="@mipmap/ic_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:adjustViewBounds="true"
+        android:layout_alignParentTop="true"
+        android:paddingRight="5dp"
+        android:paddingLeft="5dp"
+        android:layout_toLeftOf="@+id/edit"
+        android:layout_alignBottom="@+id/edit" />
+
+    <ImageButton
+        android:id="@+id/edit"
+        android:src="@mipmap/ic_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:adjustViewBounds="true"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/date"
+        android:layout_alignBottom="@+id/date" />
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="60dp"
+        android:layout_height="72dp"
+        android:text="08/18/17"
+        android:textColor="@color/colorBlack"
+        android:gravity="center"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:id="@+id/priority"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorBlack"
+        android:gravity="center"
+        android:text="Priority"
+        android:layout_alignBottom="@+id/date"
+        android:layout_toRightOf="@+id/edit"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+</RelativeLayout>

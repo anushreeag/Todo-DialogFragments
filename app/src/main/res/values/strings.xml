@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">To-do</string>
+    <string name="etHint">Enter New To-do</string>
+    <string name="btnName">Add To-do</string>
+    <string name="title_activity_main">To-do</string>
+    <string name="title_activity_edit_item">Edit Item</string>
+    <string name="save">"Save"</string>
+    <string name="enter_item_textview">"Edit Item Below"</string>
+    <string name="enter_add_todo">"Please fill the below details"</string>
+    <string name="delete_todo">"Delete this To-do?"</string>
+    <string name="ok">"Ok"</string>
+    <string name="cancel">"Cancel"</string>
+    <string name="empty">"Please enter all details"</string>
+    <string name="emptyList">"No To-do !! Please add To-do."</string>
+    <string name="emptyTitle">"Cannot save ! Title or Date is empty."</string>
+    <string name="spinnerTitle">"Choose Priority"</string>
+    <string name="priority">Priority</string>
+    <string name="dueDate">Due\nDate</string>
+    <string name="title">Title</string>
+    <string name="notes">Notes</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
