@@ -6,7 +6,7 @@ Todo Application with List view, sqlite support , custom adapter, dialog fragmen
 
 Submitted by: **Anushree Ganjam**
 
-Time spent: **24** hours spent in total
+Time spent: **26** hours spent in total
 
 ## User Stories
 
@@ -36,13 +36,15 @@ The following **additional** features are implemented:
 * [x] Appropriate Toasts if Title or Date is empty while creating or editing Todo's
 * [x] Add button is included to add the New todo and opens a dialog to fill the details
 * [x] User can cancel the creation of new Todo Item
-
+* [x] Added HELP to the app
+* [x] Displays the added To-do list based on priority (high-low)
+* [x] Highlight the priorities with colors
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/cxSRoW1.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='http://i.imgur.com/BOtgfXx.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
